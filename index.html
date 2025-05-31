@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce al programador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imagen1.png">
+    </head>
+<body>
+    <header>
+        <h1>CONOCE AL PROGRAMADOR</h1>
+
+        <nav>
+            <ul>
+                <p class="highlight"></p>
+                <a href="#index.html">Introducción</a></li>
+                <a href="#about.html">Proyectos</a></li>
+                <a href="#contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+
+            <div class="container">
+        <div class="left">
+            <img src="imagen1.png" alt="Imagen referencial">
+            </div>
+            <div class="right">
+                <article class="post" id="index.html"></article>
+                <h2>Introducción</h2>
+                <p>Mi nombre es Ricardo André,<br> por ahora no tengo mucha experiencia<br> ya que recién empiezo a programar, asi que esta pagina web es algo aburrida.</p>
+                <p>A lo largo de mi carrera la seguiré llenando y expandiéndola <br> para asi tener una manera profesional y formal de presentarme ante empleadores.</p>
+                <p>No tengo nada mas que decir de verdad. 😶</p>   
+            </div>
+        </div>
+        <div class="container">
+            <div class="left">
+                
+            </div>
+            
+        <div class="left">
+        <article class="post" id="about.html"></article>
+            <h3>Proyectos</h3>
+            <p1>En mi tiempo en Kodland realize algunos proyectos, como:</p1>
+            <ul1>   
+                <li class="fade-item">Pagina web de "Throw a Potato" (El juego del milenio)</li>
+                <li class="fade-item">Pagina web de "Throw a Potato 2" (El juego del milenio, 2)</li>
+                <li class="fade-item">Pagina web de Pastelerías Ricardin, donde las mejores tortas se hacen.</li>
+            </ul1>
+
+        <div class ='imagenes'>
+            <img src="imagen2.png" alt="Imagen referencial">
+        <div class="final">
+            <div class="abajo">
+                <article class="post" id="contact.html"></article>
+                <p2 class="delay-fade">En fin, si desea contactarme para algun encargo de pagina web no se preocupe, estoy disponible todo el tiempo, solo llame al +51 999 999 999, o encuentreme en algún lugar de por ahi.</p2>
+        </div>
+
+
+
+        <script>
+            const items = document.querySelectorAll('ul1 li');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry    => {
+                    if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        items.forEach(item => {
+        observer.observe(item);
+        });
+    </script>
+
+    </main>
